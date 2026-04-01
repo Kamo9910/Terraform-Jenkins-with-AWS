@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Terraform. Jenkins with AWS</title>
+</head>
+<body>
+        <div class="centered-text">
+
+        <h1>CI/CD PIPELINE</h1>
+        
+        <img class="myImage" src="profmk.gif" alt="Terraform and Jenkins" style="transition: transform 0.3s ease;" height="50%" width="50%">
+        
+        <h2>Project Overview:</h2>
+        <div class="jus">
+        <p>This project demostrates how infrastructure as code(IaC), container orchestration, and CI/CD automation can be combined to deliver a seamless deployment process: <br>
+               - Terraform provisions AWS infrastructure, which includes ECS clusters, task definitions, and supporting resources <br>
+               - AWS ECS (Fargate) runs the Nginx container without requiring server management<br>
+               - Jenkins is then intergrated to handle upadates. Whenever a new Nginx version is needed, Jenkins updates the ECS task definition through Terraform and redeploys the container automatically.<br>
+           The result is a clean workflow : Terraform builds the foundation, Jenkins drives the ongoing updates. Each time Jenkins runs, the ECS service redeploys with new Nginx image, and the website confirms success with the classic "Welome to Nginx"</p>
+         </div>
+         <h3>Steps taken to complets this project :</h3>
+            <h4>1. Provision Infrastructure with Terraform</h4>
+            <img class="myImage" src="Screenshot (1).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (2).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (3).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (4).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (5).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (6).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (7).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (12).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <div class="jus">
+            <p>Install Terraform and configure AWS credentials <br>
+               Define resources in Terraform configuration files <br>
+               Initialize Terraform and apply the changes <br>
+               Verify the infrastructure is created successfully</p>
+            </div>
+            <br>
+            <h4>2. Set Up Jenkins</h4>
+            <img class="myImage" src="Screenshot (8).png" alt="Jenkins" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (9).png" alt="Jenkins" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <div class="jus">
+            <p>- Installed Jenkins on Docker <br>
+               - Configured Jenkins with required plugins <br>
+               - Stored AWS credentials securely in Jenkins using Credentials Manager</p>
+            </div>
+            <br>
+            <h4>3. Create Jenkins Pipeline</h4>
+            <img class="myImage" src="Screenshot (10).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (11).png" alt="Jenkins" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <div class="jus">
+            <p>This pipeline:  <br>
+               - Runs the build step and Deploys to AWS <br>
+               - Updates the ECS task definition through Terraform and redeploys the container automatically</p>
+               </div>
+            <br>
+            <h4>4. Validate Deployment</h4>
+            <img class="myImage" src="Screenshot (13).png" alt="Jenkins" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <div class="jus">
+            <p>- Accessed the deployed website and confirmed it is functioning correctly. <br>
+               - Verified the Nginx version matches the updated image.</p>
+            </div>
+            
+        <script src="javascript.js" charset="utf-8" ></script>
+
+</body>
+
+</html>
